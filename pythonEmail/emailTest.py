@@ -4,17 +4,18 @@ from email.mime.text import MIMEText
 from email.mime.application import MIMEApplication 
 _user = "1021593619@qq.com"
 _pwd = "nnofbzungdqwbbdd"
-_to  = "18227631762@163.com"
+_to  = "769975825@qq.com"+" 731135871@qq.com"+" 846266153@qq.com"
    
 #如名字所示Multipart就是分多个部分 
 msg = MIMEMultipart() 
-msg["Subject"] = "test"
+msg["Subject"] = "周报"
 msg["From"]  = _user 
 msg["To"]   = _to 
    
-#---这是文字部分--- 
-part = MIMEText("乔装打扮，不择手段") 
-msg.attach(part) 
+#---这是文字部分---
+
+# part = MIMEText("") 
+# msg.attach(part) 
    
 #---这是附件部分--- 
 
