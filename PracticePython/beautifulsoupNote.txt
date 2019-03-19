@@ -1,0 +1,35 @@
+beautifulsoup 使用方法
+1.初始化：
+soup=beautifulsoup(fp,"解析器")
+fp为open返回的句柄或者字符串
+2.soup.xxx
+通过这种soup.标签名 我们就可以获得这个标签的内容,如果文档中有多个这样的标签，返回的结果是第一个标签的内容
+获取名称
+
+    当我们通过soup.title.name的时候就可以获得该title标签的名称，即title
+
+获取属性
+
+    print(soup.p.attrs['name'])
+    print(soup.p['name'])
+    上面两种方式都可以获取p标签的name属性值
+
+获取内容
+
+    print(soup.p.string)
+    结果就可以获取第一个p标签的内容：
+
+
+嵌套选择
+
+    print(soup.head.title.string)
+
+获取子节点：
+    contents 将p标签下的所有子标签存入到了一个列表中
+    children soup.p.children是一个迭代对象，而不是列表，只能通过循环的方式获取素有的信息
+
+find_all
+find_all(name,attrs,recursive,text,**kwargs)
+可以根据标签名，属性，内容查找文档
+
+get_text输出整个文件
