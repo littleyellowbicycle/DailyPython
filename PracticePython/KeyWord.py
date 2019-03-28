@@ -23,6 +23,5 @@ def findkeys(dirPath):
             b = collections.Counter(strText)
             words = sorted(b, key=lambda x: b[x], reverse=True)
             print(judgeit(words))
-
-
 findkeys(".\\")
+
